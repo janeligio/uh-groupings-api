@@ -456,4 +456,10 @@ public class MemberAttributeServiceImpl implements MemberAttributeService {
         }
         return members;
     }
+
+    @Override
+    public WsSubjectLookup checkGrouper(String username) {
+
+        return grouperFS.makeWsSubjectLookup(username);
+    }
 }
