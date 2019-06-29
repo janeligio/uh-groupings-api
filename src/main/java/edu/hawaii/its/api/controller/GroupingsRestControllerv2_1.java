@@ -99,8 +99,18 @@ public class GroupingsRestControllerv2_1 {
     @RequestMapping(value = "/",
             method = RequestMethod.GET)
     @ResponseBody
-    public String hello() {
-        return "University of Hawaii Groupings API";
+    public ResponseEntity hello() {
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/check",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    private ResponseEntity check(@RequestHeader("current_user") String currentuser) {
+        return ResponseEntity
+                .ok()
+                .body(memberAttributeService.checkGrouper(currentuser));
     }
 
     /**
