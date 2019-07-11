@@ -103,15 +103,6 @@ public class GroupingsRestControllerv2_1 {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/check",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    private ResponseEntity check(@RequestHeader("current_user") String currentuser) {
-        return ResponseEntity
-                .ok()
-                .body(memberAttributeService.checkGrouper(currentuser));
-    }
 
     /**
      * Get all admins and groupings

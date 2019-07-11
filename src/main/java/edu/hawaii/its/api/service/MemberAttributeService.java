@@ -41,5 +41,4 @@ public interface MemberAttributeService {
 
     public List<Person> searchMembers(String groupPath, String username);
 
-    public WsSubjectLookup checkGrouper(String username);
 }
