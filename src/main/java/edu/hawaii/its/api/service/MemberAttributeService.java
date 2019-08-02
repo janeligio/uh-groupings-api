@@ -5,7 +5,6 @@ import edu.hawaii.its.api.type.Person;
 
 import edu.internet2.middleware.grouperClient.ws.GcWebServiceError;
 import edu.internet2.middleware.grouperClient.ws.beans.WsAttributeAssign;
-import edu.internet2.middleware.grouperClient.ws.beans.WsSubjectLookup;
 
 import java.util.List;
 import java.util.Map;
@@ -40,5 +39,4 @@ public interface MemberAttributeService {
     public boolean isUuid(String username);
 
     public List<Person> searchMembers(String groupPath, String username);
-
 }
